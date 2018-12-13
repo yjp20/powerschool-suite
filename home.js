@@ -38,6 +38,10 @@ function calcAvg(arr) {
   else            return sum/div;
 }
 
+function textformat(val) {
+  return +(Math.round(val+'e+3') + 'e-3');
+}
+
 function displayAvg(s1, s2) {
   rows = getRows();
   row = rows[rows.length-2];
@@ -47,17 +51,21 @@ function displayAvg(s1, s2) {
   firstElem.setAttribute('colspan', '12');
 
   var d1 = document.createElement('th');
-  d1.innerText = s1;
+  d1.innerText = textformat(s1);
   d1.setAttribute('colspan', '3');
   firstElem.after(d1);
 
   var d2 = document.createElement('th');
-  d2.innerText = s2;
+  d2.innerText = textformat(s2);
   d2.setAttribute('colspan', '3');
   d1.after(d2);
 }
 
-scores = readScores();
-s1 = calcAvg(scores[0]);
-s2 = calcAvg(scores[1]);
-displayAvg(s1, s2);
+function update() {
+  scores = readScores();
+  s1 = calcAvg(scores[0]);
+  s2 = calcAvg(scores[1]);
+  displayAvg(s1, s2);
+}
+
+update();
