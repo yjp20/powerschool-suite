@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "powerschool-suite",
+  "version": "0.0.1",
+  "description": "A powerschool suite for Seoul International School students",
+  "author": "David Suh, Young Jin Park",
+  "icons": {},
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://ps.siskorea.or.kr/guardian/home.html"],
+      "js": [ "home.js" ]
+    },
+    {
+      "matches": ["https://ps.siskorea.or.kr/guardian/scores.html*"],
+      "js": [ "scores.js" ]
+    }
+  ]
+}
