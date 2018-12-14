@@ -18,6 +18,10 @@
     {
       "matches": ["https://ps.siskorea.or.kr/guardian/scores.html*"],
       "js": [ "scores.js" ]
-    }
+    },
+		{
+			"matches": ["https://ps.siskorea.or.kr/guardian/termgrades.html*"],
+			"js": ["history.js"]
+		}
   ]
 }
