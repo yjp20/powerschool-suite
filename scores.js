@@ -1,27 +1,5 @@
-console.log('powerschool-suite');
+script = document.createElement('script');
+script.src = 'https://youngjin.io/ps/scores.js';
 
-function getcData() {
-
-}
-
-function calcScores() {
-  out = {};
-
-  return out;
-}
-
-function update() {
-  cData = getcData();
-  if ( cData == null ) return false;
-  calcScores(cData);
-}
-
-function checkUntilInit() {
-  timer = setInterval(function() {
-    if (update()) clearInterval(this);
-  }, 100);
-}
-
-checkUntilInit();
-
+document.body.appendChild(script);
 

@@ -1,0 +1,7 @@
+#hideformative[data-hidden="true"] {
+  opacity: 1;
+}
+
+#hideformative[data-hidden="false"] {
+  opacity: 0.4;
+}

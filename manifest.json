@@ -17,11 +17,12 @@
     },
     {
       "matches": ["https://ps.siskorea.or.kr/guardian/scores.html*"],
-      "js": [ "scores.js" ]
+      "js": [ "scores.js" ],
+      "css": [ "style.css" ]
     },
 		{
 			"matches": ["https://ps.siskorea.or.kr/guardian/termgrades.html*"],
-			"js": ["history.js"]
+			"js": [ "history.js" ]
 		}
   ]
 }
